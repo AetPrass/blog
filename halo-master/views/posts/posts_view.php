@@ -53,13 +53,11 @@ server by jQuery and server's response will be written to the box below.
     <input type="text" name="foobar"/>
     <input type="submit" value="Post"/>
 </form>
-<?foreach($posts as $post):?>
     <div class="span8">
-        <h1><a href="<?=BASE_URL?>posts/view/<?$post['post_id']?>"><?=$post['post_subject']?></a>a></h1>
+        <h1><?=$post['post_subject']?></h1>
         <p><?=$post['post_text']?></p>
         <div>
             <span class="badge badge-success"><?=$post['post_created']?></span><div class="pull-right"><span class="label">alice</span> <span class="label">story</span> <span class="label">blog</span> <span class="label">personal</span></div>
         </div>
         <hr>
     </div>
-    <?endforeach?>
